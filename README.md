@@ -87,3 +87,31 @@
 - Tạo WebForm api.aspx: Trong SnakeWebApplication -> chuột phải vào SnakeWebApplication -> Chọn Add -> Chọn New item -> chọn Web Form -> Đặt tên file: api.aspx
 - Trong file api.aspx: Bỏ hết code mặc định, chỉ giữ dòng đầu tiên: <%@ Page Language="C#" AutoEventWireup="true" CodeFile="api.aspx.cs" Inherits="api" %> và file api.aspx.cs sẽ tự động được tạo ra
 - File api.aspx.cs: đọc dữ liệu từ client (Request.Form)
+
+- Build và chạy thử kiểm tra kết quả:
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c41ee05b-8df2-41c5-b457-7e586954361e" />
+
+## 5. Tạo cấu hình IIS 
+### 1. Cần tạo 1 folder mới để Publish đến
+- Trong Visual studio -> chuột phải SnakeWebApp -> chọn Publish
+
+<img width="427" height="477" alt="image" src="https://github.com/user-attachments/assets/90bd55bb-1c2b-4e1a-9139-b9dbb871b104" />
+
+- Sau khi chọn Publish -> chọn Folder -> nhấn Next -> Chọn browse và chọn đến folder mới vừa tạo -> nhấn Finish
+
+- Kết quả sau khi Publish thành công
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/40867275-1666-4f98-8498-6864d24d9c76" />
+
+### 2. Cài IIS
+- Mở Control Panel -> Chọn Program -> Chọn Turn Windows features on or off
+
+<img width="1399" height="739" alt="image" src="https://github.com/user-attachments/assets/749669de-d6c5-4b88-ae44-95e7752d11ea" />
+
+- Nhấn chọn Internet Information Services -> nhấn OK
+
+<img width="547" height="484" alt="image" src="https://github.com/user-attachments/assets/b33de733-ded1-4766-8fa5-6b1fe8f8b365" />
+
+
+
