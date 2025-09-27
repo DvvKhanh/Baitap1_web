@@ -1,0 +1,9 @@
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\obj\Debug\SnakeConsoleApp.csproj.AssemblyReference.cache
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\obj\Debug\SnakeConsoleApp.csproj.CoreCompileInputs.cache
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\bin\Debug\SnakeConsoleApp.exe
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\bin\Debug\SnakeConsoleApp.pdb
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\bin\Debug\SnakeClassLibrary.dll
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\bin\Debug\SnakeClassLibrary.pdb
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\obj\Debug\SnakeCon.07C799A4.Up2Date
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\obj\Debug\SnakeConsoleApp.exe
+C:\WEB\SnakeClassLibrary\SnakeConsoleApp\obj\Debug\SnakeConsoleApp.pdb
