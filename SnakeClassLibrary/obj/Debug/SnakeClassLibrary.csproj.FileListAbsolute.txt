@@ -1,6 +1,0 @@
-C:\WEB\SnakeClassLibrary\SnakeClassLibrary\obj\Debug\SnakeClassLibrary.csproj.AssemblyReference.cache
-C:\WEB\SnakeClassLibrary\SnakeClassLibrary\obj\Debug\SnakeClassLibrary.csproj.CoreCompileInputs.cache
-C:\WEB\SnakeClassLibrary\SnakeClassLibrary\bin\Debug\SnakeClassLibrary.dll
-C:\WEB\SnakeClassLibrary\SnakeClassLibrary\bin\Debug\SnakeClassLibrary.pdb
-C:\WEB\SnakeClassLibrary\SnakeClassLibrary\obj\Debug\SnakeClassLibrary.dll
-C:\WEB\SnakeClassLibrary\SnakeClassLibrary\obj\Debug\SnakeClassLibrary.pdb
