@@ -25,6 +25,7 @@
 - Chú ý: Tất cả các class và hàm muốn cho project khác sử dụng phải để public.
 - Sau khi viết code xong, ta nhấn Build trên thanh công cụ -> Build Solution (hoặc Ctrl + Shift + B).
 - Sau khi Build xong, sẽ có file SnakeClassLibrary.dll
+
 <img width="768" height="42" alt="image" src="https://github.com/user-attachments/assets/57c64d16-51fa-470b-9dbf-45b751ddf508" />
 
 ## 2. Tạo Console app, sử dụng .NET Framework 2.0 và sử dụng được DLL trên:
@@ -128,3 +129,5 @@
 # Kết quả:
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/be3b276e-c73b-417b-b815-2090cc8dcff6" />
+
+🌿🌸🌻🌹🍀🌺🌷🍁🌲🌊🌞🌙⭐️
