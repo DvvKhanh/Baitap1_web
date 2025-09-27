@@ -17,7 +17,7 @@
 - Sau khi nhấn Next, nó sẽ hiện ra cửa sổ sau:
 <img width="1261" height="840" alt="image" src="https://github.com/user-attachments/assets/53386bcc-dea5-4aa0-9e83-8e068b0548a6" />
 
-- Trong cửa sổ cần đặt tên Project và Location (nơi lưu project) -> nhấn Create
+- Trong cửa sổ cần đặt tên Project và Location (nơi lưu project) và chọn .NET Framework 2.0 -> nhấn Create
 - Sau đó Visual Studio sẽ tạo sẵn một file Class1.cs (có thể đổi tên nếu muốn), rồi tiến hành viết code
 
 <img width="1920" height="1200" alt="Screenshot 2025-09-27 204011" src="https://github.com/user-attachments/assets/9f02853f-b8b5-49d8-8612-a92ac479fddb" />
@@ -37,7 +37,7 @@
 
 <img width="1245" height="818" alt="image" src="https://github.com/user-attachments/assets/456d53dd-c6ab-4f40-9eeb-ce93c270c3bb" />
 
-- Sau đó tiến hành đặt tên project -> nhấn Create
+- Sau đó tiến hành đặt tên project và chọn .NET Framework 2.0 -> nhấn Create
 - Khi tạo xong thì sẽ xuất hiện file Program.cs -> tiến hành viết code trong file Program.cs
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1d5b3a7d-56af-4f70-998f-2ff758a1f9ef" />
@@ -48,15 +48,14 @@
 
 - Sau khi tham chiếu đến DLL xong, thì tiến hành Build → Build Solution (Ctrl+Shift+B). Chạy bằng F5 (debug) hoặc Ctrl+F5 (run without debug).
 
-## 3. Windows Form Application
+## 3. Tạo Windows Form Application(.NET Framework 2.0)
 - Mục tiêu: Xây dựng giao diện cửa sổ để chơi Snake.
 - Trong Solution -> chuột phải chọn Add -> chọn New project
-
 - Tạo project: cần tìm và chọn Windows Forms App (.NET Framework) -> Next
 
 <img width="1260" height="837" alt="image" src="https://github.com/user-attachments/assets/7311b12a-6207-4d44-9660-651e73e4d0d0" />
 
-- Sau đó tiến hành đặt tên project -> nhấn Create
+- Sau đó tiến hành đặt tên project và chọn .NET Framework 2.0 -> nhấn Create
 
 - Sau khi tạo xong, chuột phải References → Add Reference… → Browse → chọn file SnakeClassLibrary.dll -> nhấn OK
 
@@ -66,4 +65,25 @@
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e949b088-7528-4439-a280-c0301a194286" />
 
-- 
+- Nhấn Build → chạy thử.
+
+## 4. Tạo Web đơn giản, sử dụng .NET Framework 2.0, sử dụng web server là IIS
+- Mục tiêu: Tạo giao diện web chơi Snake, gọi DLL qua backend API.
+
+- Trong Solution -> chuột phải chọn Add -> chọn New project
+- Sau đó cần tìm và chọn ASP.NET Web Application (.NET Framework) -> Next
+
+  <img width="1248" height="837" alt="image" src="https://github.com/user-attachments/assets/8813a640-a648-444c-9368-e8c7b9ed990d" />
+
+- Tiến hành đặt tên project và chọn .NET Framework 2.0 -> nhấn Create
+- Chuột phải References trong project → Add Reference… → Browse → chọn file SnakeClassLibrary.dll -> nhấn OK.
+
+<img width="972" height="670" alt="image" src="https://github.com/user-attachments/assets/ddf7e0b8-fcb3-4272-bc6b-6b6a2befd209" />
+
+- Thêm file: Chuột phải vào SnakeWebApplication -> Chọn Add -> Chọn New item -> chọn html page
++ index.html → giao diện nhập dữ liệu (bàn phím/di chuyển, nút Start, bảng điểm).
++ script.js → điều khiển hiển thị bàn chơi bằng HTML + CSS + Canvas.
+
+- Tạo WebForm api.aspx: Trong SnakeWebApplication -> chuột phải vào SnakeWebApplication -> Chọn Add -> Chọn New item -> chọn Web Form -> Đặt tên file: api.aspx
+- Trong file api.aspx: Bỏ hết code mặc định, chỉ giữ dòng đầu tiên: <%@ Page Language="C#" AutoEventWireup="true" CodeFile="api.aspx.cs" Inherits="api" %> và file api.aspx.cs sẽ tự động được tạo ra
+- File api.aspx.cs: đọc dữ liệu từ client (Request.Form)
