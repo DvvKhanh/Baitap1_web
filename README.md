@@ -9,9 +9,10 @@
 # BÀI LÀM:
 ## 1. Tạo DLL đa năng, keyword: c# window library -> Class Library (.NET Framework)
 
-<img width="1265" height="831" alt="image" src="https://github.com/user-attachments/assets/201d0c0d-01ad-4054-a150-e6e2b99d4f35" />
+- Mục tiêu: Tạo một DLL để xử lý toàn bộ logic của game Snake: quản lý rắn, thức ăn, di chuyển, tính điểm…
+- Trong Visual Studio 2022, tìm và chọn Class Library -> nhấn Next.
 
-- Trong Visual Studio 2022, tìm Class Library -> nhấn Next.
+<img width="1265" height="831" alt="image" src="https://github.com/user-attachments/assets/201d0c0d-01ad-4054-a150-e6e2b99d4f35" />
 
 - Sau khi nhấn Next, nó sẽ hiện ra cửa sổ sau:
 <img width="1261" height="840" alt="image" src="https://github.com/user-attachments/assets/53386bcc-dea5-4aa0-9e83-8e068b0548a6" />
@@ -25,3 +26,44 @@
 - Sau khi viết code xong, ta nhấn Build trên thanh công cụ -> Build Solution (hoặc Ctrl + Shift + B).
 - Sau khi Build xong, sẽ có file SnakeClassLibrary.dll
 <img width="768" height="42" alt="image" src="https://github.com/user-attachments/assets/57c64d16-51fa-470b-9dbf-45b751ddf508" />
+
+## 2. Tạo Console app, sử dụng .NET Framework 2.0 và sử dụng được DLL trên:
+- Mục tiêu: Dùng DLL để chơi Snake trên màn hình dòng lệnh (đen sì).
+- Trong Solution -> chuột phải chọn Add -> chọn New project
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/6ebc935b-db01-422e-89f7-0d10af1c923b" />
+
+- Sau đó tìm và chọn Console App (.NET Framework) -> nhấn Next
+
+<img width="1245" height="818" alt="image" src="https://github.com/user-attachments/assets/456d53dd-c6ab-4f40-9eeb-ce93c270c3bb" />
+
+- Sau đó tiến hành đặt tên project -> nhấn Create
+- Khi tạo xong thì sẽ xuất hiện file Program.cs -> tiến hành viết code trong file Program.cs
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1d5b3a7d-56af-4f70-998f-2ff758a1f9ef" />
+
+- Khi viết code xong cần tham chiếu đến DLL: nhấn chuột phải References trong Console App → Add Reference… → Browse → chọn file SnakeClassLibrary.dll -> nhấn OK
+
+<img width="979" height="674" alt="image" src="https://github.com/user-attachments/assets/6e5ea40e-71c6-4077-8f8b-2dec92e19b9b" />
+
+- Sau khi tham chiếu đến DLL xong, thì tiến hành Build → Build Solution (Ctrl+Shift+B). Chạy bằng F5 (debug) hoặc Ctrl+F5 (run without debug).
+
+## 3. Windows Form Application
+- Mục tiêu: Xây dựng giao diện cửa sổ để chơi Snake.
+- Trong Solution -> chuột phải chọn Add -> chọn New project
+
+- Tạo project: cần tìm và chọn Windows Forms App (.NET Framework) -> Next
+
+<img width="1260" height="837" alt="image" src="https://github.com/user-attachments/assets/7311b12a-6207-4d44-9660-651e73e4d0d0" />
+
+- Sau đó tiến hành đặt tên project -> nhấn Create
+
+- Sau khi tạo xong, chuột phải References → Add Reference… → Browse → chọn file SnakeClassLibrary.dll -> nhấn OK
+
+<img width="975" height="674" alt="image" src="https://github.com/user-attachments/assets/570a553b-8121-47b2-8e37-0d3096740008" />
+
+- Để thiết kế giao diện game, mở Form1.cs trong Design: trên thanh công cụ chọn View -> Toolbox rồi kéo Panel (vùng vẽ bàn chơi), Button (Start/Restart), Label (Hiển thị điểm).
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e949b088-7528-4439-a280-c0301a194286" />
+
+- 
