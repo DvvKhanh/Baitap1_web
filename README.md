@@ -113,5 +113,18 @@
 
 <img width="547" height="484" alt="image" src="https://github.com/user-attachments/assets/b33de733-ded1-4766-8fa5-6b1fe8f8b365" />
 
+- Mở IIS Manager -> chuột phải vào Sites -> chọn Add Website
 
+<img width="1419" height="809" alt="image" src="https://github.com/user-attachments/assets/7c694221-0123-4836-abd3-282a10f3be28" />
 
+- Trong cửa sổ Add Website cần điền thông tin: site name, physical path host name.
+
+<img width="724" height="833" alt="image" src="https://github.com/user-attachments/assets/6546a40c-1631-4f96-b549-52b4472bfd65" />
+
+- Cuối cùng chuột phải vào Notepad -> chọn Run as Administrator -> hiển thị file hosts -> thêm 127.0.0.1 snake.com ở cuối file -> nhấn Ctrl+S để lưu file
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/23c4ddb7-6702-4f00-ac8f-47943d542bf7" />
+
+# Kết quả:
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/be3b276e-c73b-417b-b815-2090cc8dcff6" />
