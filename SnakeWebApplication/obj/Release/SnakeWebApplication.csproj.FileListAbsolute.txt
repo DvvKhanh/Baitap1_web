@@ -1,0 +1,10 @@
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\bin\SnakeWebApplication.dll.config
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\bin\SnakeWebApplication.dll
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\bin\SnakeWebApplication.pdb
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\bin\SnakeClassLibrary.dll
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\bin\SnakeClassLibrary.pdb
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\obj\Release\SnakeWebApplication.csproj.AssemblyReference.cache
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\obj\Release\SnakeWebApplication.csproj.CoreCompileInputs.cache
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\obj\Release\SnakeWeb.763CD778.Up2Date
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\obj\Release\SnakeWebApplication.dll
+C:\WEB\SnakeClassLibrary\SnakeWebApplication\obj\Release\SnakeWebApplication.pdb

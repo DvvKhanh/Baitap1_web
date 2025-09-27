@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🐍 Snake Game</title>
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #c6f6d5, #9ae6b4, #68d391);
+            font-family: "Segoe UI", Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: flex-start;
+            padding-top: 30px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #22543d;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Thanh điều khiển chứa score và nút restart */
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px; /* tạo khoảng cách lớn hơn để tách khỏi emoji */
+            margin-bottom: 30px;
+        }
+
+        #score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2f855a;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #2f855a;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+            button:hover {
+                background: #276749;
+                transform: scale(1.05);
+            }
+
+        .game-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        #board {
+            background: #f0fff4;
+            border: 4px solid #2f855a;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            display: block;
+        }
+
+        /* Emoji trang trí */
+        .emoji {
+            position: absolute;
+            font-size: 26px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🐍 Snake Game</h1>
+
+    <!-- Score và Restart được đặt trong khung riêng -->
+    <div class="controls">
+        <div id="score">Score: 0</div>
+        <button onclick="restartGame()">🔄 Restart</button>
+    </div>
+
+    <div class="game-container">
+        <canvas id="board" width="600" height="600"></canvas>
+
+        <!-- Emoji cute xung quanh -->
+        <div class="emoji" style="top:-40px;left:10px;">🐍</div>
+        <div class="emoji" style="top:-40px;left:50px;">🦎</div>
+        <div class="emoji" style="top:-40px;left:90px;">🐸</div>
+        <div class="emoji" style="top:-40px;left:130px;">🍓</div>
+        <div class="emoji" style="top:-40px;left:170px;">🌸</div>
+        <div class="emoji" style="top:-40px;left:210px;">🍎</div>
+        <div class="emoji" style="top:-40px;left:250px;">🐢</div>
+        <div class="emoji" style="top:-40px;left:290px;">🐲</div>
+        <div class="emoji" style="top:-40px;left:330px;">🍀</div>
+        <div class="emoji" style="top:-40px;left:370px;">🌱</div>
+        <div class="emoji" style="top:-40px;left:410px;">🍉</div>
+        <div class="emoji" style="top:-40px;left:450px;">🐍</div>
+        <div class="emoji" style="top:-40px;left:490px;">🪴</div>
+        <div class="emoji" style="top:-40px;left:530px;">🦎</div>
+        <div class="emoji" style="top:-40px;left:570px;">🐸</div>
+
+        <!-- Dọc trái -->
+        <div class="emoji" style="top:20px;left:-40px;">🐍</div>
+        <div class="emoji" style="top:60px;left:-40px;">🦎</div>
+        <div class="emoji" style="top:100px;left:-40px;">🐢</div>
+        <div class="emoji" style="top:140px;left:-40px;">🍎</div>
+        <div class="emoji" style="top:180px;left:-40px;">🌸</div>
+        <div class="emoji" style="top:220px;left:-40px;">🍀</div>
+        <div class="emoji" style="top:260px;left:-40px;">🐲</div>
+        <div class="emoji" style="top:300px;left:-40px;">🍓</div>
+        <div class="emoji" style="top:340px;left:-40px;">🌱</div>
+        <div class="emoji" style="top:380px;left:-40px;">🪴</div>
+        <div class="emoji" style="top:420px;left:-40px;">🐍</div>
+        <div class="emoji" style="top:460px;left:-40px;">🐸</div>
+        <div class="emoji" style="top:500px;left:-40px;">🍉</div>
+        <div class="emoji" style="top:540px;left:-40px;">🦎</div>
+
+        <!-- Dọc phải -->
+        <div class="emoji" style="top:20px;right:-40px;">🐍</div>
+        <div class="emoji" style="top:60px;right:-40px;">🦎</div>
+        <div class="emoji" style="top:100px;right:-40px;">🐢</div>
+        <div class="emoji" style="top:140px;right:-40px;">🍓</div>
+        <div class="emoji" style="top:180px;right:-40px;">🌸</div>
+        <div class="emoji" style="top:220px;right:-40px;">🐲</div>
+        <div class="emoji" style="top:260px;right:-40px;">🌱</div>
+        <div class="emoji" style="top:300px;right:-40px;">🍎</div>
+        <div class="emoji" style="top:340px;right:-40px;">🐸</div>
+        <div class="emoji" style="top:380px;right:-40px;">🍀</div>
+        <div class="emoji" style="top:420px;right:-40px;">🪴</div>
+        <div class="emoji" style="top:460px;right:-40px;">🐍</div>
+        <div class="emoji" style="top:500px;right:-40px;">🍉</div>
+        <div class="emoji" style="top:540px;right:-40px;">🦎</div>
+
+        <!-- Hàng dưới -->
+        <div class="emoji" style="bottom:-40px;left:10px;">🌸</div>
+        <div class="emoji" style="bottom:-40px;left:50px;">🍎</div>
+        <div class="emoji" style="bottom:-40px;left:90px;">🐢</div>
+        <div class="emoji" style="bottom:-40px;left:130px;">🐲</div>
+        <div class="emoji" style="bottom:-40px;left:170px;">🐍</div>
+        <div class="emoji" style="bottom:-40px;left:210px;">🌱</div>
+        <div class="emoji" style="bottom:-40px;left:250px;">🍉</div>
+        <div class="emoji" style="bottom:-40px;left:290px;">🦎</div>
+        <div class="emoji" style="bottom:-40px;left:330px;">🍓</div>
+        <div class="emoji" style="bottom:-40px;left:370px;">🍀</div>
+        <div class="emoji" style="bottom:-40px;left:410px;">🐍</div>
+        <div class="emoji" style="bottom:-40px;left:450px;">🐸</div>
+        <div class="emoji" style="bottom:-40px;left:490px;">🪴</div>
+        <div class="emoji" style="bottom:-40px;left:530px;">🌸</div>
+        <div class="emoji" style="bottom:-40px;left:570px;">🍎</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("board");
+        const ctx = canvas.getContext("2d");
+        const cellSize = 25;
+
+        // Emoji rắn & mồi
+        const headEmoji = "⬛";
+        const bodyEmoji = "⬜";
+        const foodEmoji = "🍎";
+
+        let snake = [];
+        let food = {};
+        let dir = "Right";
+        let score = 0;
+        let gameLoop = null;
+
+        function placeFood() {
+            food = {
+                x: Math.floor(Math.random() * (canvas.width / cellSize)),
+                y: Math.floor(Math.random() * (canvas.height / cellSize))
+            };
+        }
+
+        function restartGame() {
+            snake = [
+                { x: 8, y: 8 },
+                { x: 7, y: 8 },
+                { x: 6, y: 8 }
+            ];
+            dir = "Right";
+            score = 0;
+            document.getElementById("score").innerText = "Score: 0";
+            placeFood();
+            if (gameLoop) clearInterval(gameLoop);
+            gameLoop = setInterval(update, 150);
+            draw();
+        }
+
+        function draw() {
+            ctx.fillStyle = "#f0fff4";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = cellSize + "px Arial";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+
+            // Vẽ mồi
+            ctx.fillText(foodEmoji, food.x * cellSize + cellSize / 2, food.y * cellSize + cellSize / 2);
+
+            // Vẽ rắn
+            for (let i = 0; i < snake.length; i++) {
+                ctx.fillText(
+                    i === 0 ? headEmoji : bodyEmoji,
+                    snake[i].x * cellSize + cellSize / 2,
+                    snake[i].y * cellSize + cellSize / 2
+                );
+            }
+        }
+
+        function update() {
+            let head = { ...snake[0] };
+            if (dir === "Right") head.x++;
+            if (dir === "Left") head.x--;
+            if (dir === "Up") head.y--;
+            if (dir === "Down") head.y++;
+
+            // Va chạm tường
+            if (head.x < 0 || head.y < 0 || head.x >= canvas.width / cellSize || head.y >= canvas.height / cellSize) {
+                gameOver();
+                return;
+            }
+
+            // Va chạm thân
+            for (let part of snake) {
+                if (part.x === head.x && part.y === head.y) {
+                    gameOver();
+                    return;
+                }
+            }
+
+            snake.unshift(head);
+
+            // Ăn mồi
+            if (head.x === food.x && head.y === food.y) {
+                score += 5;
+                document.getElementById("score").innerText = "Score: " + score;
+                placeFood();
+            } else {
+                snake.pop();
+            }
+
+            draw();
+        }
+
+        function gameOver() {
+            clearInterval(gameLoop);
+            alert("💀 Game Over! Điểm của bạn: " + score);
+        }
+
+        document.addEventListener("keydown", e => {
+            if (e.key === "ArrowLeft" && dir !== "Right") dir = "Left";
+            if (e.key === "ArrowUp" && dir !== "Down") dir = "Up";
+            if (e.key === "ArrowRight" && dir !== "Left") dir = "Right";
+            if (e.key === "ArrowDown" && dir !== "Up") dir = "Down";
+        });
+
+        restartGame();
+    </script>
+</body>
+</html>

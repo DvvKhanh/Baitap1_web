@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\WEB\SnakeGame</_PublishTargetUrl>
+    <History>True|2025-09-27T15:12:12.2379429Z||;True|2025-09-27T22:12:09.3019559+07:00||;True|2025-09-27T22:05:55.6379378+07:00||;True|2025-09-27T00:10:45.7606675+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="api.aspx">
+      <publishTime>09/26/2025 22:24:04</publishTime>
+    </File>
+    <File Include="bin/SnakeClassLibrary.dll">
+      <publishTime>09/26/2025 21:31:42</publishTime>
+    </File>
+    <File Include="bin/SnakeClassLibrary.pdb">
+      <publishTime>09/26/2025 21:31:42</publishTime>
+    </File>
+    <File Include="bin/SnakeWebApplication.dll">
+      <publishTime>09/27/2025 22:12:09</publishTime>
+    </File>
+    <File Include="bin/SnakeWebApplication.pdb">
+      <publishTime>09/27/2025 22:12:09</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>09/27/2025 20:20:20</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/27/2025 00:10:45</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

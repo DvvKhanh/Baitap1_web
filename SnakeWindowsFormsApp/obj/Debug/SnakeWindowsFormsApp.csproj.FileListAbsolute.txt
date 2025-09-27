@@ -1,0 +1,12 @@
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\SnakeWindowsFormsApp.csproj.AssemblyReference.cache
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\WinFormsApp.Form1.resources
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\SnakeWindowsFormsApp.Properties.Resources.resources
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\SnakeWindowsFormsApp.csproj.GenerateResource.cache
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\SnakeWindowsFormsApp.csproj.CoreCompileInputs.cache
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\bin\Debug\SnakeWindowsFormsApp.exe
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\bin\Debug\SnakeWindowsFormsApp.pdb
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\bin\Debug\SnakeClassLibrary.dll
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\bin\Debug\SnakeClassLibrary.pdb
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\SnakeWin.155EE8BA.Up2Date
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\SnakeWindowsFormsApp.exe
+C:\WEB\SnakeClassLibrary\SnakeWindowsFormsApp\obj\Debug\SnakeWindowsFormsApp.pdb
