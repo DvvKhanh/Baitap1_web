@@ -16,5 +16,11 @@
 - Sau khi nhấn Next, nó sẽ hiện ra cửa sổ sau:
 <img width="1261" height="840" alt="image" src="https://github.com/user-attachments/assets/53386bcc-dea5-4aa0-9e83-8e068b0548a6" />
 
-- Sau đó cần đặt tên Project và Location (nơi lưu project).
-- Khi tạo xong 
+- Trong cửa sổ cần đặt tên Project và Location (nơi lưu project) -> nhấn Create
+- Sau đó Visual Studio sẽ tạo sẵn một file Class1.cs, rồi tiến hành viết
+
+<img width="1920" height="1200" alt="Screenshot 2025-09-27 204011" src="https://github.com/user-attachments/assets/9f02853f-b8b5-49d8-8612-a92ac479fddb" />
+
+- Chú ý: Tất cả các class và hàm muốn cho project khác sử dụng phải để public.
+- Sau khi viết code xong, ta nhấn Build trên thanh công cụ -> Build Solution (hoặc Ctrl + Shift + B).
+- Sau khi Build xong, sẽ có file SnakeClassLibrary.dll   <img width="768" height="42" alt="image" src="https://github.com/user-attachments/assets/57c64d16-51fa-470b-9dbf-45b751ddf508" />
