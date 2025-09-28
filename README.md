@@ -8,7 +8,7 @@
 
 # BÀI LÀM:
 
-# Đề tài: Xây dựng trò chơi Rắn săn mồi (Snack Game) - Trò chơi cho phép người chơi điều khiển rắn di chuyển trong bản đồ để ăn mồi 🍎, mỗi lần ăn mồi rắn sẽ dài thêm và cần phải tránh để rắn tự cắn vào thân hoặc va vào tường.
+# Đề tài: Xây dựng trò chơi Rắn săn mồi (Snake Game) - Trò chơi cho phép người chơi điều khiển rắn di chuyển trong bản đồ để ăn mồi 🍎, mỗi lần ăn mồi rắn sẽ dài thêm và cần phải tránh để rắn tự cắn vào thân hoặc va vào tường.
 ## 1. Tạo DLL đa năng, keyword: c# window library -> Class Library (.NET Framework)
 
 - Mục tiêu: Tạo một DLL để xử lý toàn bộ logic của game Snake: quản lý rắn, thức ăn, di chuyển, tính điểm…
