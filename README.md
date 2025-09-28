@@ -7,6 +7,8 @@
 ## 4. Web đơn giản, bắt buộc sử dụng .NET Framework 2.0, sử dụng web server là IIS, dùng file hosts để tự tạo domain, gắn domain này vào iis, file index.html có sử dụng html css js để xây dựng giao diện nhập được các input cho bài toán, dùng mã js để tiền xử lý dữ liệu, js để gửi lên backend. backend là api.aspx, trong code của api.aspx.cs thì lấy được các input mà js gửi lên, rồi sử dụng được DLL đa năng trên. kết quả gửi lại json cho client, js phía client sẽ nhận được json này hậu xử lý để thay đổi giao diện theo dữ liệu nhận dược, phải có dấu án cá nhân. keyword: c# window web => ASP.NET Web Application (.NET Framework) + tham khảo link chatgpt thầy gửi. project web này biên dịch ra DLL, phải kết hợp với IIS mới chạy được.
 
 # BÀI LÀM:
+
+# Đề tài: Xây dựng trò chơi Rắn săn mồi (Snack Game) - Trò chơi cho phép người chơi điều khiển rắn di chuyển trong bản đồ để ăn mồi 🍎, mỗi lần ăn mồi rắn sẽ dài thêm và cần phải tránh để rắn tự cắn vào thân hoặc va vào tường.
 ## 1. Tạo DLL đa năng, keyword: c# window library -> Class Library (.NET Framework)
 
 - Mục tiêu: Tạo một DLL để xử lý toàn bộ logic của game Snake: quản lý rắn, thức ăn, di chuyển, tính điểm…
